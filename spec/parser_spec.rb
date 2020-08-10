@@ -10,3 +10,14 @@ describe '#server_log' do
     end
   end
 end
+
+describe '#page_views' do
+  context 'when not provided uniq attribute' do
+    let(:file_path) { 'log/webserver.log' }
+    let(:uniq) { nil }
+
+    it 'returns sorted page views' do
+      expect { page_views(file_path, uniq) }.to raise_error(RuntimeError, 'Please select uniq attribute')
+    end
+  end
+end
