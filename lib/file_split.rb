@@ -1,3 +1,4 @@
+# class for checking that file exists and spliting file for counting
 class FileSplit
   attr_reader :file_path
 
@@ -8,6 +9,6 @@ class FileSplit
   end
 
   def open_and_split
-    IO.foreach(@file_path).map(&:split)
+    IO.foreach(file_path).map(&:split)
   end
 end

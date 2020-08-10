@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require './lib/file_split'
+require './lib/group_count'
+require './lib/formatted_sort'
 
 def server_log(log)
   raise 'Please enter log path' unless log
@@ -11,7 +13,8 @@ end
 def page_views(log, uniq)
   raise 'Please select uniq attribute' if uniq.nil?
 
-  puts log
+  counted_log = GroupCount.new(log, ARGV[1] || 0, uniq).group_and_count
+  FormattedSort.new(counted_log, uniq).sort_and_prepare
 end
 
 if $0 == __FILE__
