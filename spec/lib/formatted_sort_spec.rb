@@ -1,7 +1,8 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
 require 'formatted_sort'
 
-describe FormattedSort, type: :class do
+RSpec.describe FormattedSort, type: :class do
   let(:uniq) { nil }
   let(:array) { nil }
   let(:subject) { described_class.new(array, uniq).sort_and_prepare }

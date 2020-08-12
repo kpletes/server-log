@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # class for sorting and adding uniq string to array
 class FormattedSort
   attr_reader :array

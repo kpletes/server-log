@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require './lib/file_split'
 require './lib/group_count'
@@ -17,7 +18,7 @@ def page_views(log, uniq)
   FormattedSort.new(counted_log, uniq).sort_and_prepare
 end
 
-if $0 == __FILE__
+if $PROGRAM_NAME == __FILE__
   split_log = server_log(ARGV[0])
   puts page_views(split_log, false)
   puts '-----'

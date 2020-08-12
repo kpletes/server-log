@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # class for checking that file exists and spliting file for counting
 class FileSplit
   attr_reader :file_path

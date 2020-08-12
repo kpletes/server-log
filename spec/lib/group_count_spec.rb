@@ -1,7 +1,8 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
 require 'group_count'
 
-describe GroupCount, type: :class do
+RSpec.describe GroupCount, type: :class do
   let(:uniq) { nil }
   let(:group_by) { nil }
   let(:array) { [['/help_page/1', '126.318.035.038'], ['/help_page', '126.318.035.038']] }

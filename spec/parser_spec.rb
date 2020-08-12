@@ -1,7 +1,8 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
 require './parser'
 
-describe '#server_log' do
+RSpec.describe '#server_log' do
   context 'when not provided file_path' do
     let(:file_path) { nil }
 
@@ -11,7 +12,7 @@ describe '#server_log' do
   end
 end
 
-describe '#page_views' do
+RSpec.describe '#page_views' do
   context 'when not provided uniq attribute' do
     let(:file_path) { 'log/webserver.log' }
     let(:uniq) { nil }

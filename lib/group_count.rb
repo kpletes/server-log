@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # class for grouping by column and counting uniq or not uniq occurrences
 class GroupCount
   attr_reader :array, :group_by

@@ -1,7 +1,8 @@
-require 'spec_helper'
+# frozen_string_literal: true
+
 require 'file_split'
 
-describe FileSplit, type: :class do
+RSpec.describe FileSplit, type: :class do
   let(:file_path) { nil }
   let(:subject) { described_class.new(file_path).open_and_split }
 
